@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">w06-multiples-axotol</string>
+    <string name="multiply_symbol">X</string>
+    <string name="multiply_btnText">multiply!</string>
+</resources>

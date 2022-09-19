@@ -6,16 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/factor1"
-        android:layout_width="wrap_content"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilFactor1"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
+        android:background="@android:color/transparent"
+        app:boxBackgroundColor="@android:color/transparent"
         app:layout_constraintBottom_toTopOf="@+id/btnMultiply"
         app:layout_constraintEnd_toStartOf="@+id/tvMultiply"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/factor1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="factor 1" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/tvMultiply"
@@ -24,21 +32,29 @@
         android:text="@string/multiply_symbol"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/btnMultiply"
-        app:layout_constraintEnd_toStartOf="@+id/factor2"
+        app:layout_constraintEnd_toStartOf="@+id/tilFactor2"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/factor1"
+        app:layout_constraintStart_toEndOf="@+id/tilFactor1"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/factor2"
-        android:layout_width="wrap_content"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilFactor2"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
+        android:background="@android:color/transparent"
+        app:boxBackgroundColor="@android:color/transparent"
         app:layout_constraintBottom_toTopOf="@+id/btnMultiply"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tvMultiply"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/factor2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="factor 2" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnMultiply"

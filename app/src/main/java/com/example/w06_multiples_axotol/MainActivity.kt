@@ -71,11 +71,18 @@ class MainActivity : AppCompatActivity() {
             }
 
             if (proceed) {
-                // step 4
+                /* step 4
                 val i = Intent(this, ResultActivity::class.java).apply {
                     putExtra("result", Result(factor1 * factor2))
                 }
                 startActivity(i)
+                 */
+
+                val fragment = ResultFragment.newInstance(factor1 * factor2)
+                supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.result_container, fragment)
+                    .commit()
             }
         }
     }
